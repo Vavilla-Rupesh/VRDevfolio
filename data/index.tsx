@@ -21,6 +21,7 @@ import {
   SiPython,
 } from "react-icons/si";
 export const navItems = [
+  { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Achievements", link: "#achievements" },
