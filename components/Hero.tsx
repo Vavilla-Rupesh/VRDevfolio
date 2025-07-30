@@ -22,9 +22,9 @@ const Hero = () => {
 
   return (
     <div
-  id="home"
-  className="relative min-h-screen scroll-mt-36 pt-40 pb-20"
->
+      id="home"
+      className="relative min-h-screen scroll-mt-36 pt-24 pb-16 md:pt-40 md:pb-20"
+    >
       {/* Spotlights */}
       <div>
         <Spotlight
@@ -49,39 +49,16 @@ const Hero = () => {
         />
       </div>
 
-      {/* <motion.div
-  className={`fixed z-50 transition-all ease-in-out ${
-    shrink ? "top-4 right-4 w-16 h-16" : "top-[25%] right-[5%] w-60 h-60"
-  } rounded-full 
-    shadow-[0_4px_30px_rgba(168,85,247,0.6)] 
-    hover:shadow-[0_6px_40px_rgba(147,51,234,0.8)] 
-    bg-gradient-to-br from-purple-700 to-fuchsia-600 p-[3px]`}
-  initial={{ opacity: 0, scale: 0.5 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{
-    type: "spring",
-    stiffness: 220,
-    damping: 18,
-  }}
-  drag
-  dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-  whileHover={{ scale: 1.05 }}
->
-  <div className="w-full h-full rounded-full bg-white/20 backdrop-blur-xl p-1">
-    <img
-      src="/profile.jpg"
-      alt="Rupesh"
-      className="w-full h-full object-cover rounded-full border-white"
-    />
-  </div>
-</motion.div> */}
- <motion.div
-        className={`mt-16 fixed z-50 transition-all ease-in-out ${
-          shrink ? "top-4 right-4 w-16 h-16" : "top-[30%] right-[5%] w-48 h-48"
+      {/* Profile Image - Floating for Desktop */}
+      <motion.div
+        className={`mt-36 hidden md:block fixed z-50 transition-all ease-in-out ${
+          shrink
+            ? "top-4 right-4 w-16 h-16"
+            : "top-[20%] right-[5%] w-48 h-48"
         } rounded-full
         shadow-[0_4px_14px_0_rgb(0,118,255,0.39)]
-       hover:shadow-[0_6px_40px_rgba(147,51,234,0.8)] 
-    bg-gradient-to-br from-purple-700 to-fuchsia-600`}
+        hover:shadow-[0_6px_40px_rgba(147,51,234,0.8)] 
+        bg-gradient-to-br from-purple-700 to-fuchsia-600`}
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -101,19 +78,30 @@ const Hero = () => {
         />
       </motion.div>
 
-
       {/* Hero Content */}
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center space-y-6">
+          {/* Top tagline */}
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80 lg:max-w-none lg:whitespace-nowrap">
             Blending sleek frontend with strong backend for progress
           </p>
 
+          {/* Animated Text */}
           <TextGenerateEffect
             words="Designing with intent coding with focus and continuously evolving"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-2xl sm:text-3xl md:text-5xl lg:text-6xl"
           />
 
+          {/* Profile Image - Static on Mobile only */}
+          <div className="block md:hidden w-24 h-24 rounded-full overflow-hidden border-2 border-white shadow-md bg-gradient-to-br from-purple-700 to-fuchsia-600">
+            <img
+              src="/profile.jpg"
+              alt="Rupesh"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
+
+          {/* Name Description */}
           <p className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Vavilla Rupesh, a frontend-focused full-stack learner
           </p>
