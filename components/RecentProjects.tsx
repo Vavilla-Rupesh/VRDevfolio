@@ -80,9 +80,7 @@ const RecentProjects = () => {
                   >
                     <span className="relative text-purple lg:text-xl md:text-xs text-sm font-medium">
                       <span className="relative z-10">Check Application</span>
-                      <span
-                        className="absolute left-0 bottom-0 w-full h-[2px] bg-purple scale-x-0 group-hover/link:scale-x-100 transition-transform origin-left duration-300"
-                      ></span>
+                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-purple scale-x-0 group-hover/link:scale-x-100 transition-transform origin-left duration-300"></span>
                     </span>
                     <FaLocationArrow
                       className="transition-transform duration-300 group-hover/link:translate-x-1"
