@@ -18,7 +18,7 @@ const RecentProjects = () => {
             key={item.id}
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
           >
-            {/* 🔗 Outer clickable card */}
+            {/* Whole card clickable */}
             <a
               href={item.link}
               target="_blank"
@@ -55,7 +55,7 @@ const RecentProjects = () => {
                   {item.des}
                 </p>
 
-                {/* Tech Icons + Link */}
+                {/* Tech Icons + Check Application */}
                 <div className="flex items-center justify-between mt-7 mb-3">
                   {/* Icons */}
                   <div className="flex items-center gap-3">
@@ -70,14 +70,8 @@ const RecentProjects = () => {
                     ))}
                   </div>
 
-                  {/* "Check Application" link */}
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="group/link flex items-center gap-2 cursor-pointer transition-all duration-300 hover:drop-shadow-[0_0_0.4rem_#CBACF9aa]"
-                  >
+                  {/* Check Application (no separate link) */}
+                  <div className="group/link flex items-center gap-2 cursor-pointer transition-all duration-300 hover:drop-shadow-[0_0_0.4rem_#CBACF9aa]">
                     <span className="relative text-purple lg:text-xl md:text-xs text-sm font-medium">
                       <span className="relative z-10">Check Application</span>
                       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-purple scale-x-0 group-hover/link:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -86,7 +80,7 @@ const RecentProjects = () => {
                       className="transition-transform duration-300 group-hover/link:translate-x-1"
                       color="#CBACF9"
                     />
-                  </a>
+                  </div>
                 </div>
               </PinContainer>
             </a>
