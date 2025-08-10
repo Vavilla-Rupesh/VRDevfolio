@@ -19,11 +19,9 @@ const RecentProjects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
           >
             {/* Whole card clickable */}
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full h-full transition-transform hover:scale-[1.02] group"
+            <div
+              onClick={() => window.open(item.link, "_blank", "noopener,noreferrer")}
+              className="block w-full h-full transition-transform hover:scale-[1.02] group cursor-pointer"
             >
               <PinContainer>
                 {/* Project image */}
@@ -70,8 +68,8 @@ const RecentProjects = () => {
                     ))}
                   </div>
 
-                  {/* Check Application (no separate link) */}
-                  <div className="group/link flex items-center gap-2 cursor-pointer transition-all duration-300 hover:drop-shadow-[0_0_0.4rem_#CBACF9aa]">
+                  {/* Check Application visual only */}
+                  <div className="group/link flex items-center gap-2 transition-all duration-300 hover:drop-shadow-[0_0_0.4rem_#CBACF9aa]">
                     <span className="relative text-purple lg:text-xl md:text-xs text-sm font-medium">
                       <span className="relative z-10">Check Application</span>
                       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-purple scale-x-0 group-hover/link:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -83,7 +81,7 @@ const RecentProjects = () => {
                   </div>
                 </div>
               </PinContainer>
-            </a>
+            </div>
           </div>
         ))}
       </div>
